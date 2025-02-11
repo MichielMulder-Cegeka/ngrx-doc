@@ -1,0 +1,15 @@
+<button id="increment" (click)="increment()">Increment</button>
+
+<div>Current Count: {{ count$ | async }}</div>
+
+<button id="decrement" (click)="decrement()">Decrement</button>
+
+<button id="reset" (click)="reset()">Reset Counter</button>
+
+<button id="reset" (click)="getCountries()">Counter or Countries?</button>
+
+@for (name of countryNames$ | async | keyvalue; track name.value) {
+<ul>
+  <li>{{ name.value }}</li>
+</ul>
+}
